@@ -1,0 +1,90 @@
+/*
+  AI IMP NEWS OS
+  Scheduler Page Styles
+  Version: 2.0
+*/
+
+.schedule-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.schedule-slot {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: var(--bg-primary);
+    border-radius: var(--radius-md);
+}
+
+.schedule-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 120px;
+}
+
+.schedule-input {
+    padding: 8px 12px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 600;
+    background: var(--bg-card);
+    color: var(--text-primary);
+}
+
+/* Timeline */
+.schedule-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-left: 3px solid var(--border-light);
+    padding-left: 20px;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    border-left-color: transparent;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -8px;
+    width: 14px;
+    height: 14px;
+    border-radius: var(--radius-full);
+    background: var(--border-light);
+    border: 3px solid var(--bg-card);
+}
+
+.timeline-item.completed .timeline-dot { background: var(--success); }
+.timeline-item.completed { border-left-color: var(--success); }
+.timeline-item.upcoming .timeline-dot { background: var(--warning); }
+.timeline-item.pending .timeline-dot { background: var(--border-light); }
+
+.timeline-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.timeline-time {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.timeline-status {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
